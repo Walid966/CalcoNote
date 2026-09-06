@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4efe7">
+  <meta name="description" content="حساباتك، ومعنى كل رقم في مكان واحد.">
+  <title>حِسبة | آلة حاسبة بملاحظات</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="حسبة - الرئيسية">
+        <span class="brand-mark">÷</span>
+        <span>حِسبة</span>
+      </a>
+      <div class="topbar-note"><span class="status-dot"></span> مساحتك الخاصة للحساب</div>
+    </header>
+
+    <main id="top" class="workspace">
+      <section class="intro reveal">
+        <p class="eyebrow">CALCULATE WITH CONTEXT <span></span></p>
+        <h1>كل رقم له حكاية.</h1>
+        <p class="intro-copy">احسب براحتك، وأضف ملاحظة لكل رقم حتى تفضل عارف كل نتيجة طلعت منين.</p>
+      </section>
+
+      <section class="app-grid" id="appGrid">
+        <div class="calculator-panel reveal delay-one">
+          <div class="panel-heading">
+            <div>
+              <p class="section-kicker">الحسبة الحالية</p>
+              <h2>ابدأ من هنا</h2>
+            </div>
+            <div class="heading-actions">
+              <button class="history-toggle" id="toggleHistory" type="button">سجل العمليات <span>↗</span></button>
+              <button class="icon-button" id="clearAll" type="button" aria-label="مسح الحسبة الحالية" title="مسح الحسبة الحالية">⌫</button>
+            </div>
+          </div>
+
+          <div class="display" aria-live="polite">
+            <div class="expression" id="expression">جاهز للحساب</div>
+            <div class="display-value" id="displayValue">0</div>
+          </div>
+          <div class="last-result" id="lastResult" hidden>
+            <span>آخر نتيجة</span>
+            <strong id="lastResultValue">0</strong>
+          </div>
+          <label class="current-note-field" id="currentNoteField" hidden>
+            <span><b>✎</b> ملاحظة الرقم الحالي</span>
+            <textarea id="currentNoteInput" rows="2" placeholder="اكتب الرقم ده بتاع إيه؟"></textarea>
+          </label>
+
+          <div class="calculator-keys" aria-label="أزرار الآلة الحاسبة">
+            <button class="key key-muted" data-action="clear" type="button">AC</button>
+            <button class="key key-muted" data-action="backspace" type="button">⌫</button>
+            <button class="key key-muted" data-action="percent" type="button">%</button>
+            <button class="key key-operator" data-value="/" type="button">÷</button>
+            <button class="key" data-value="7" type="button">7</button>
+            <button class="key" data-value="8" type="button">8</button>
+            <button class="key" data-value="9" type="button">9</button>
+            <button class="key key-operator" data-value="*" type="button">×</button>
+            <button class="key" data-value="4" type="button">4</button>
+            <button class="key" data-value="5" type="button">5</button>
+            <button class="key" data-value="6" type="button">6</button>
+            <button class="key key-operator" data-value="-" type="button">−</button>
+            <button class="key" data-value="1" type="button">1</button>
+            <button class="key" data-value="2" type="button">2</button>
+            <button class="key" data-value="3" type="button">3</button>
+            <button class="key key-operator" data-value="+" type="button">+</button>
+            <button class="key key-zero" data-value="0" type="button">0</button>
+            <button class="key" data-value="." type="button">.</button>
+            <button class="key key-equals" data-action="equals" type="button">=</button>
+          </div>
+          <p class="keyboard-hint"><span>↵</span> اضغط Enter للحساب <span>·</span> <span>Esc</span> للمسح</p>
+        </div>
+
+        <aside class="notes-panel reveal delay-two" aria-label="سجل الملاحظات الحالي">
+          <div class="panel-heading">
+            <div>
+              <p class="section-kicker">المساحة الثابتة</p>
+              <h2>سجل الملاحظات</h2>
+            </div>
+            <span class="notes-mark">✎</span>
+          </div>
+          <p class="notes-helper">كل رقم وملاحظته يفضلوا ظاهرين هنا أثناء الحسبة وبعد ما تخلص.</p>
+          <div class="draft-ledger" id="draftLedger" hidden aria-live="polite"></div>
+        </aside>
+
+        <aside class="history-panel reveal delay-two" id="historyPanel" hidden>
+          <div class="panel-heading history-heading">
+            <div>
+              <p class="section-kicker">ذاكرة الحسبة</p>
+              <h2>آخر العمليات</h2>
+            </div>
+            <div class="heading-actions">
+              <span class="count-badge" id="historyCount">0</span>
+              <button class="history-close" id="closeHistory" type="button" aria-label="إغلاق سجل العمليات">×</button>
+            </div>
+          </div>
+          <div class="history-list" id="historyList">
+            <div class="empty-state" id="emptyState">
+              <span class="empty-icon">✦</span>
+              <strong>لسه مفيش عمليات</strong>
+              <p>أول عملية هتظهر هنا، وكل رقم فيها هيكون قابل لإضافة ملاحظة.</p>
+            </div>
+          </div>
+          <button class="clear-history" id="clearHistory" type="button">مسح سجل العمليات <span>↗</span></button>
+        </aside>
+      </section>
+
+      <section class="tip-bar reveal delay-three">
+        <span class="tip-icon">✎</span>
+        <p><strong>فكرة سريعة</strong> اضغط على أي رقم داخل عملية محفوظة واكتب هو كان بيمثل إيه.</p>
+        <span class="tip-decoration">01 / 03</span>
+      </section>
+    </main>
+
+    <footer class="footer"><span>حِسبة</span><span>بياناتك محفوظة على جهازك فقط</span></footer>
+  </div>
+
+  <div class="modal-backdrop" id="noteModal" hidden>
+    <div class="note-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModal" type="button" aria-label="إغلاق">×</button>
+      <div class="modal-eyebrow">ملاحظة الرقم</div>
+      <div class="modal-number" id="modalNumber">100</div>
+      <h2 id="modalTitle">الرقم ده خاص بإيه؟</h2>
+      <p>اكتب وصفًا بسيطًا عشان تفتكر الحسبة بسهولة بعدين.</p>
+      <label class="note-field">
+        <span>الوصف</span>
+        <textarea id="noteInput" rows="3" placeholder="مثال: مشتريات الأسبوع..."></textarea>
+      </label>
+      <div class="modal-actions">
+        <button class="button-secondary" id="cancelNote" type="button">إلغاء</button>
+        <button class="button-primary" id="saveNote" type="button">حفظ الملاحظة <span>↗</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
