@@ -4,7 +4,7 @@
     "target": {
       "namespace": "android_app",
       "package_name": "io.github.walid966.twa",
-      "sha256_cert_fingerprints": ["D9:AF:40:70:95:AF:19:FB:CD:DF:79:F6:8C:53:F9:B5:85:B8:BC:C1:CE:D5:E5:5E:98:02:88:7A:CE:B8:98:37"]
+      "sha256_cert_fingerprints": ["1B:C5:45:7C:13:2A:24:23:24:D5:D2:B1:48:26:2D:C5:03:6E:00:4F:C7:83:52:45:86:8C:15:D3:30:1E:AE:73"]
     }
   }
 ]
