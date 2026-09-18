@@ -1,7 +1,8 @@
-const CACHE_NAME = "hesba-shell-v1";
+const CACHE_NAME = "hesba-shell-v2";
 const APP_SHELL = [
   "./",
   "./index.html",
+  "./privacy-policy.html",
   "./style.css",
   "./app.js",
   "./manifest-v2.webmanifest",

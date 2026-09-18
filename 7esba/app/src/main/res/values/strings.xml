@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">حِسبة</string>
+    <string name="brand_mark">÷</string>
+    <string name="topbar_note">مساحتك الخاصة للحساب</string>
+    <string name="eyebrow">CALCULATE WITH CONTEXT</string>
+    <string name="hero_title">كل رقم له حكاية.</string>
+    <string name="hero_copy">احسب براحتك، وأضف ملاحظة لكل رقم حتى تفضل عارف كل نتيجة طلعت منين.</string>
+
+    <string name="current_calc_kicker">الحسبة الحالية</string>
+    <string name="current_calc_title">ابدأ من هنا</string>
+    <string name="history_toggle">سجل العمليات ↗</string>
+    <string name="clear_all">مسح الحسبة الحالية</string>
+    <string name="ready_placeholder">جاهز للحساب</string>
+    <string name="last_result_label">آخر نتيجة</string>
+
+    <string name="note_field_current">ملاحظة الرقم الحالي</string>
+    <string name="note_field_next">ملاحظة الرقم التالي</string>
+    <string name="note_hint_current">اكتب الرقم ده بتاع إيه؟</string>
+    <string name="note_hint_next">اكتب ملاحظة الرقم الثاني قبل أو بعد كتابته…</string>
+
+    <string name="keyboard_hint">اضغط على الأزرار أو استخدم لوحة المفاتيح إن كانت متاحة</string>
+
+    <string name="notes_kicker">المساحة الثابتة</string>
+    <string name="notes_title">سجل الملاحظات</string>
+    <string name="notes_helper">كل رقم وملاحظته يفضلوا ظاهرين هنا أثناء الحسبة وبعد ما تخلص.</string>
+    <string name="ledger_title">سجل الملاحظات الحالي</string>
+    <string name="ledger_empty">اكتب أول رقم، وملاحظته هتظهر هنا وتفضل محفوظة قدامك.</string>
+
+    <string name="history_kicker">ذاكرة الحسبة</string>
+    <string name="history_title">آخر العمليات</string>
+    <string name="history_empty_title">لسه مفيش عمليات</string>
+    <string name="history_empty_copy">أول عملية هتظهر هنا، وكل رقم فيها هيكون قابل لإضافة ملاحظة.</string>
+    <string name="clear_history">مسح سجل العمليات ↗</string>
+    <string name="result_label">نتيجة الحسبة</string>
+
+    <string name="tip_title">فكرة سريعة</string>
+    <string name="tip_copy">اضغط على أي رقم داخل عملية محفوظة واكتب هو كان بيمثل إيه.</string>
+
+    <string name="footer_note">بياناتك محفوظة على جهازك فقط</string>
+
+    <string name="modal_eyebrow">ملاحظة الرقم</string>
+    <string name="modal_title">الرقم ده خاص بإيه؟</string>
+    <string name="modal_copy">اكتب وصفًا بسيطًا عشان تفتكر الحسبة بسهولة بعدين.</string>
+    <string name="modal_field_label">الوصف</string>
+    <string name="modal_hint">مثال: مشتريات الأسبوع…</string>
+    <string name="cancel">إلغاء</string>
+    <string name="save_note">حفظ الملاحظة ↗</string>
+    <string name="close">إغلاق</string>
+
+    <string name="toast_note_saved">اتحفظت الملاحظة</string>
+    <string name="toast_draft_saved">اتحفظت ملاحظة الرقم</string>
+    <string name="toast_calculation_saved">اتحفظت الحسبة في السجل</string>
+    <string name="toast_history_cleared">اتمسح سجل العمليات</string>
+    <string name="error_divide_by_zero">لا يمكن القسمة على صفر</string>
+
+    <string name="cd_clear">مسح الحسبة الحالية</string>
+    <string name="cd_close_history">إغلاق سجل العمليات</string>
+    <string name="cd_close_modal">إغلاق</string>
+    <string name="cd_add_note">إضافة أو تعديل الملاحظة</string>
+</resources>

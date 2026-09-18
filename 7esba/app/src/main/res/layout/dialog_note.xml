@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_modal"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.15"
+        android:text="@string/modal_eyebrow"
+        android:textColor="@color/coral"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/modalNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_chip"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="0"
+        android:textColor="@color/forest_deep"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/modal_title"
+        android:textColor="@color/ink"
+        android:textSize="19sp"
+        android:textStyle="bold" />
+
+    <TextView
+        style="@style/MutedText"
+        android:layout_marginTop="6dp"
+        android:text="@string/modal_copy" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/modal_field_label"
+        android:textColor="@color/muted"
+        android:textSize="11sp" />
+
+    <EditText
+        android:id="@+id/modalNoteInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_note_field"
+        android:hint="@string/modal_hint"
+        android:inputType="textMultiLine|textCapSentences"
+        android:maxLines="4"
+        android:minLines="2"
+        android:padding="12dp"
+        android:textColor="@color/ink"
+        android:textColorHint="@color/muted"
+        android:textSize="14sp" />
+
+    <LinearLayout style="@style/Row" android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/modalCancel"
+            style="@style/ModalAction"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_secondary"
+            android:text="@string/cancel"
+            android:textColor="@color/ink" />
+
+        <Button
+            android:id="@+id/modalSave"
+            style="@style/ModalAction"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1.4"
+            android:background="@drawable/bg_button_primary"
+            android:text="@string/save_note"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

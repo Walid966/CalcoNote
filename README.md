@@ -6,6 +6,16 @@
 
 لا تحتاج إلى تثبيت أي شيء. افتح `index.html` مباشرة في المتصفح.
 
+## سياسة الخصوصية
+
+- الصفحة: [`privacy-policy.html`](privacy-policy.html)
+- الرابط المنشور بعد رفع التحديث على GitHub Pages:
+  **https://walid966.github.io/CalcoNote/privacy-policy.html**
+  (استخدم هذا الرابط في Google Play Console ← App content ← Privacy policy).
+
+الخلاصة: التطبيق لا يجمع أي بيانات إطلاقًا — لا تحليلات، لا إعلانات، لا إنترنت
+(تطبيق أندرويد لا يطلب أي صلاحية) — وكل الملاحظات والسجل يبقى محفوظًا على جهاز المستخدم فقط.
+
 ## النشر على GitHub Pages
 
 1. أنشئ مستودعًا جديدًا على GitHub.

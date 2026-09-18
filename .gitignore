@@ -1,2 +1,7 @@
 google-play-package/
+google-play-packageV2/
 *- Google Play package.zip
+*.keystore
+*.jks
+signing-key-info.txt
+
